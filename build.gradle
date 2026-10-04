@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.cyclonedx.bom' version '3.4.1'
+}
+
+application {
+    mainClass = 'pt.upt.fleetcheck.App'
+}
+
+group = 'pt.upt.softwarequality'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+dependencies {
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.22.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.14.4'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'pt.upt.fleetcheck.App'
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from {
+        configurations.runtimeClasspath.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+}

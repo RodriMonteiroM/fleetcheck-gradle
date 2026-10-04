@@ -1,0 +1,6 @@
+[
+  {"id":"V1","model":"EV","mileageKm":52000,"lastServiceKm":40000,"serviceIntervalKm":10000},
+  {"id":"V2","model":"Hybrid","mileageKm":22000,"lastServiceKm":15000,"serviceIntervalKm":10000},
+  {"id":"V3","model":"Diesel","mileageKm":65000,"lastServiceKm":55000,"serviceIntervalKm":10000},
+  {"id":"V4","model":"Petrol","mileageKm":9000,"lastServiceKm":0,"serviceIntervalKm":10000}
+]
