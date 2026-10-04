@@ -85,7 +85,8 @@ O wrapper descarrega e usa sempre a versão fixada no projeto, localmente e no C
 ### 8.5 – GitHub Actions
 Workflow em `.github/workflows/build-gradle.yml`; `gradlew` marcado como executável no Git.
 
-Execução: _(colocar aqui o URL da execução no GitHub Actions)_
+**Evidência 8.5:** execução bem-sucedida (verde, artefacto `fleetcheck-gradle-build`): https://github.com/RodriMonteiroM/fleetcheck-gradle/actions/runs/37233974465
+Repositório: https://github.com/RodriMonteiroM/fleetcheck-gradle
 
 ### 8.6 – SBOM com Gradle
 `gradlew.bat cyclonedxBom` gera `build/reports/cyclonedx/bom.json`, que contém
